@@ -1,0 +1,205 @@
+/* =====================================================
+   CUSTOMIZE HERE — Change these to make it yours!
+   ===================================================== */
+:root {
+  --color-accent: #0057ff;        /* TODO: Change to your favorite color */
+  --color-bg: #ffffff;
+  --color-surface: #f5f5f5;
+  --color-text: #111111;
+  --color-text-muted: #555555;
+  --color-border: #e5e5e5;
+  --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --max-width: 900px;
+}
+
+/* =====================================================
+   BASE — you probably don't need to touch this
+   ===================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: opacity 0.15s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+/* =====================================================
+   HERO SECTION
+   ===================================================== */
+.hero {
+  padding: 6rem 0 5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-surface);
+  border: 3px solid var(--color-border);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.hero-name {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.hero-bio {
+  max-width: 540px;
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+.hero-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* =====================================================
+   PROJECTS SECTION
+   ===================================================== */
+.projects {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: var(--color-surface);
+  border-radius: 10px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border: 1px solid var(--color-border);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.project-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  flex: 1;
+}
+
+.project-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+/* =====================================================
+   CONTACT / FOOTER
+   ===================================================== */
+.contact {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.contact-email {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-muted);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 600px) {
+  .hero-name {
+    font-size: 2.2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
